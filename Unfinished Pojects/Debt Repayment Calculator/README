@@ -1,0 +1,21 @@
+# Debt Repayment Calculator
+
+Debt Repayment Calculator (DRC) is a calculation tool for tracking total debt of a user and the time to pay off said debt calculated against growing interest.
+
+## Current State
+
+Current state of DRC is unfinished. The logic and algorithms all function to serve the purpose of receiving appropriate user information, and calculating and displaying the proper output, but a GUI has not yet been made nor necessary modifications to work with a GUI.
+
+## Purpose
+
+DRC has been developed for use as a simplified finance application during an era of ever growing individual debt with so many finance tools without the need to risk linking your private finance information with an application. As a college student surrounded by students that are soon to graduate with their student debt, a tool such as this felt like a necessity for many who might not understand the true weight debt such as this can carry or how to properly pay it off.
+
+### Intended Upgrades
+
+- PC/Web application GUI
+- Mobile GUI
+- If expanded to a full mobile application, extra features to provide basic money saving help.
+
+# Developer
+
+Samantha R. Morgan
