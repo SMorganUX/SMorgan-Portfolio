@@ -44,7 +44,7 @@ footer{
   top: 0; left: 0;
   width: 100%;
   height: 100vh;
-  background: url("https://assets.codepen.io/4152792/Illustration6.png") 5% bottom / auto 80% no-repeat, linear-gradient(to bottom, var(--bright), var(--dark));
+  background: url("assets/img/portrait.png") 5% bottom / auto 80% no-repeat, linear-gradient(to bottom, var(--bright), var(--dark));
   color: white;
   transition: all 0.8s ease;
   transform-origin: top left;
