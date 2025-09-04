@@ -93,7 +93,6 @@ footer{
 }
 .flex-item a{
   display:block;
-  position:absolute;
   width:100%;
   height:100%;
   padding:0;
@@ -101,12 +100,18 @@ footer{
   border-radius:0;
 }
 .flex-item p{
+  position:absolute;
+  bottom:5%;
+  right:5%;
   text-align:right;
   font-size:1em;
   width: 80%;
   color:white;
 }
 .flex-item h2{
+  position:absolute;
+  bottom:50%;
+  right:5%;
   text-align:right;
   font-size:1.2em;
   color:white;
