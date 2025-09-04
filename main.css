@@ -87,7 +87,7 @@ footer{
 }
 
 .flex-item {
-  background: rgba(108, 230, 114, .5);
+  background: rgba(108, 230, 114, .25);
   width: 28vw;
   height: 20vw;
 }
