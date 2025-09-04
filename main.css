@@ -93,6 +93,7 @@ footer{
 }
 .flex-item a{
   display:block;
+  position:absolute;
   width:100%;
   height:100%;
   padding:0;
@@ -102,10 +103,13 @@ footer{
 .flex-item p{
   text-align:right;
   font-size:1em;
+  width: 80%;
+  color:white;
 }
 .flex-item h2{
   text-align:right;
   font-size:1.2em;
+  color:white;
 }
 
 .hero-placeholder {
