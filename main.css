@@ -39,6 +39,8 @@ footer{
   text-shadow: 0 1em white;
 }
 
+/*MAIN*/
+
 .hero {
   position: fixed;
   top: 0; left: 0;
@@ -63,6 +65,7 @@ footer{
   top:50%;
   right:5%;
   max-width:40%;
+  text-shadow: 0 .5em var(--dark);
 }
 #contact p{display:inline-block;margin:.5rem;border-right: solid 1px;padding-right:.2rem}
 
