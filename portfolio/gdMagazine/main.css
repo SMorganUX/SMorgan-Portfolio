@@ -1,0 +1,135 @@
+body{
+  --main:#e26d5c;
+  --light:#ffe1a8;
+  --mid:#723d46;
+  --dark:#472d30;
+  background: var(--main);
+  color: var(--light);
+  font-family:Algreya, serif;
+}
+
+::-webkit-scrollbar{display:none}
+
+@font-face{
+  font-family:Edition_;
+  src: url("assets//EDITION_.TTF")
+}
+@font-face{
+  font-family:LibreBarcode39Text-Regular;
+  src: url("assets/LibreBarcode39Text-Regular.ttf")
+}
+@font-face{
+  font-family:Algreya;
+  src: url("assets/Algreya-Regular.ttf")
+}
+
+          /*FONT*/
+h1{
+  font-size:4em;
+  font-family:Edition_;
+  font-weight:400;
+}
+main h1{
+  font-size:3em;
+  text-shadow: .5em .5em var(--mid)
+}
+h2{
+  font-size:2em;
+  font-weight:400;
+  border-bottom: solid 1px;
+  font-family:Edition_;
+}
+p{
+  font-size:1em;
+}
+
+.highlight{
+  background:var(--mid);
+  padding:2px;
+}
+a,a:link{
+  background:var(--light);
+  padding:2px;
+  color:var(--dark);
+  text-decoration:none;
+  transition:.3s;
+}
+a:hover{
+  box-shadow:
+    .4em .4em var(--main),
+    .8em .6em var(--mid);
+}
+
+
+
+header{
+  margin:0;
+  top:0;
+  left:0;
+  padding:1vh;
+  background: var(--dark);
+  box-shadow:
+    2vh 2vh var(--dark),
+    4vh 4vh var(--mid),
+    6vh 6vh var(--light);
+}
+header *{
+  display:inline-block
+}
+
+
+main{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: flex-end;
+}
+
+#desc{
+  margin-right:6vh;
+  padding:2vh;
+  max-width: 50vh;
+  max-height: 70vh;
+  overflow:auto;
+  background: var(--dark);
+  box-shadow:
+    2vh 2vh var(--main),
+    4vh 4vh var(--mid),
+    6vh 6vh var(--light);
+  margin-bottom:7vh;
+}
+#previewer{
+  background: var(--dark);
+  width:600px;
+  height:385px;
+  border:1vh solid var(--dark);
+  box-shadow:
+    2vh 6vh var(--main),
+    4vh 12vh var(--mid),
+    6vh 18vh var(--light);
+  margin-bottom:7vh;
+}
+
+footer{
+  font-family:LibreBarcode39Text-Regular;
+  text-align:right;
+  font-size:6vh;
+  margin-top:7vh;
+  padding-bottom:10vh;
+}
+
+@media only screen and (max-width: 1150px) {
+  main{justify-content:center}
+  #desc{
+    max-width:calc(80vw - 12vh);
+    padding:6vh;
+    height:fit-content;
+  }
+  #previewer{
+    width: 80vw;
+    height:80vh;
+  }
+  footer{
+    margin-top:15vh;
+    font-size:8vh
+  }
+}
