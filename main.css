@@ -58,6 +58,7 @@ footer{
   bottom:50%;
   right:5%;
   max-width:80%;
+  filter: dropshadow(.5em .5em var(--dark));
 }
 #contact{
   position:absolute;
@@ -65,7 +66,7 @@ footer{
   top:50%;
   right:5%;
   max-width:40%;
-  text-shadow: 0 .5em var(--dark);
+  filter: dropshadow(.5em .5em var(--dark));
 }
 #contact p{display:inline-block;margin:.5rem;border-right: solid 1px;padding-right:.2rem}
 
