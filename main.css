@@ -191,13 +191,32 @@ footer{
   }
   
   #profile {
-    height:160vh;
+    margin-top:10vh;
+    height:fit-content;
     display:flex;
     flex-flow:column wrap;
     justify-content:center;
   }
-  #contact,#profile h1,#circlePortrait{
+  #contact,#profile h1{
     max-width:90%;
     position:relative;
+    display:block;
+    margin:1vh;
+    float:none;
+    top:0;
+    bottom;0;
+    left:0;
+    right:0;
+  }
+  #circlePortrait{
+    position:relative;
+    display:block;
+    margin:1vh;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:70vw;
+    height:70vw;
   }
 }
