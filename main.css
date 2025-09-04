@@ -107,7 +107,7 @@ footer{
   max-width:50vw;
   max-height:50vw;
   border-radius:100%;
-  background: url("assets/img/portrait2.jpg") 32% 25% / 275%;
+  background: url('assets/img/portrait2.jpg') 32% 25% / 275%;
   box-shadow: 5vh 8vh var(--dark)
 }
 
