@@ -87,7 +87,7 @@ footer{
 }
 
 .flex-item {
-  background: #eee;
+  background: rgba(108, 230, 114, .5);
   width: 28vw;
   height: 20vw;
 }
@@ -98,6 +98,14 @@ footer{
   padding:0;
   border:0;
   border-radius:0;
+}
+.flex-item p{
+  text-align:right;
+  font-size:1em;
+}
+.flex-item h2{
+  text-align:right;
+  font-size:1.2em;
 }
 
 .hero-placeholder {
