@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body{
+  --bg: #FFF3B0;
+  --light: #E09F3E;
+  --dark: #335C67;
+  --main: #9E2A2B;
+  
+  background: var(--bg)
+}
+
+h1,h2{
+  font-family: "Abril Fatface", serif;
+}
+p{
+  font-family: "GFS Neohellenic", sans-serif;
+  font-size:16px;
+}
+
+#categoryNav {
+  position: fixed;
+  margin:auto;
+  top: 0;
+  bottom:0;
+  right: 0;
+  z-index: 1000;
+  background: var(--light);
+  height: fit-content;
+  overflow-y: auto;
+  font-family: "GFS Neohellenic", sans-serif;
+  font-size: 26px;
+}
+
+#categoryNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#categoryNav li {
+  cursor: pointer;
+  padding: 2vh;
+  color: var(--dark);
+  transition: 0.3s;
+}
+
+#categoryNav li:hover {
+  color: var(--bg);
+  background: var(--main);
+}
+
+#products{
+  position:absolute;
+  margin:auto;
+  padding:1vh;
+  width:calc(100vw - 6vh - 100px);
+  height:fit-content;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:flex-start;
+}
+
+.category,.product{
+  position:relative;
+  margin:2vh;
+  padding:2vh;
+  width: 30vh;
+  height:60vh;
+  background:white;
+  overflow:hidden;
+}
+
+.category{
+ background: var(--light);
+  color: var(--dark);
+}
+
+.category h2{
+  position:absolute;
+  margin:auto;
+  top:0;
+  right:0;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform:rotate(180deg);
+  height:70vh;
+  text-align:right;
+  font-size:10vh;
+  transition:1s;
+}
+
+.catHov{
+  position:absolute;
+  margin:auto;
+  top:100%;
+  left:0;
+  width:calc(100% - 4vh);
+  height:calc(100% - 4vh);
+  padding:2vh;
+  overflow:auto;
+  transition:1s;
+}
+
+.category:hover h2{
+  top:-100%;
+}
+.category:hover .catHov{
+  top:0%;
+}
+
+.product{
+  
+}
+.product h2, .product p{
+  color:var(--dark);
+  font-family: "GFS Neohellenic", sans-serif;
+}
+.product p{
+  height:fit-content;
+  max-height:30%;
+  overflow:auto;
+}
+
+.product:nth-child(even){
+  background:var(--dark);
+}
+.product:nth-child(even) h2,.product:nth-child(even) p{
+  color:white;
+}
+
+.product:nth-child(3n){
+  background:var(--main);
+}
+.product:nth-child(3n) h2,.product:nth-child(3n) p{
+  color:white;
+}
+
+.product img{
+  position:absolute;
+  margin:auto;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:50%;
+  background: var(--light);
+}
+
