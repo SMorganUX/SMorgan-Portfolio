@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Quicksand:wght@300..700&display=swap');
-
 body{
   --main: rgb(255,204,089);
   background: var(--main);
@@ -7,6 +5,14 @@ body{
 }
 
           /*Fonts*/
+@font-face{
+  font-family: Corinthia;
+  src: url("portfolio/justBread/assets/font/Corinthia-Regular.ttf");
+}
+@font-face{
+  font-family: Quicksand;
+  src: url("portfolio/justBread/assets/font/Quicksand-VariableFont_wght.ttf");
+}
 h1{
   font-family: Corinthia;
   font-size:4em;
@@ -78,7 +84,7 @@ a{
   right:0;
   width:60vh;
   height:45vh;
-  background: url("https://assets.codepen.io/4152792/jb_hap.png") center -35% / 100% auto no-repeat;
+  background: url("portfolio/justBread/assets/img/jb_hap.png") center -35% / 100% auto no-repeat;
   transition:1s;
 }
 #breadHap:hover{
