@@ -155,17 +155,17 @@ main{
 }
 
 #godrick{
-  background-image: url(assets/left+character+godrick.png);
+  background-image: url("assets/left+character+godrick.png");
 }
 
 #radahn{
-  background-image: url(assets/right+character+radahn.png);
+  background-image: url("assets/right+character+radahn.png");
   right:-20%;
   bottom:-2vh;
 }
 #malenia{
   width:80%;
-  background-image: url(assets/left+character+malenia.png);
+  background-image: url("assets/left+character+malenia.png");
   filter:blur(.2vh)
 }
 .section:hover #malenia{
@@ -180,13 +180,13 @@ main{
 }
  
 #ranni{
-  background-image: url(assets/character+ranni.png);
+  background-image: url("assets/character+ranni.png");
   width:45%;
   left:0%;
   right:0;
 }
 #blaidd{
-  background-image: url(assets/right+character+blaidd.png);
+  background-image: url("assets/right+character+blaidd.png");
 }
 
 .info{
@@ -235,7 +235,7 @@ footer p{
   bottom:-20vh;
   left:-10vw;
   right:-10vw;
-  background-image: url(assets/cloud2_yellowblue.webp),url(assets/cloud2_yellowblue.webp);
+  background-image: url("assets/cloud2_yellowblue.webp"),url("assets/cloud2_yellowblue.webp");
   background-position:left bottom,right 110%;
   background-size:auto 80vh, auto 70vh;
   background-repeat:no-repeat;
