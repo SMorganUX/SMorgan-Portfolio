@@ -1,1 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Quicksand:wght@300..700&display=swap');
 
+body{
+  --main: rgb(255,204,089);
+  background: var(--main);
+  font-family: Quicksand;
+}
+
+          /*Fonts*/
+h1{
+  font-family: Corinthia;
+  font-size:4em;
+}
+p{
+  margin:1em;
+}
+a{
+  
+}
+
+.navbar{
+  position:fixed;
+  margin:auto;
+  background:white;
+  top:0;
+  left:0;
+  right:0;
+  border-radius: 0 0 20% 20%;
+  z-index:100;
+}
+
+.logo{
+  position:relative;
+  margin:3vh;
+  font-family: Corinthia;
+  font-weight:bold;
+  font-size:3em;
+  height:80px;
+}
+
+.nav-links{
+  position:relative;
+  float:right;
+  padding-right:5vh;
+  padding-bottom:5vh;
+  margin-top:-5vh;
+  width:fit-content;
+}
+.nav-links a{
+  text-decoration:none;
+  color:black;
+  font-weight:bold;
+  margin-right:2em;
+}
+
+          /*HERO*/
+.hero{
+  margin-top:calc(25vh);
+  width:calc(100% - 100px);
+  height: calc(60vh - 100px);
+  padding:50px;
+}
+.hero h1{
+  color:white;
+  font-size:5em;
+  margin:0;
+  font-weight:1000;
+}
+.hero .textBox{
+  background:white;
+  border-color: white;
+}
+
+#breadHap{
+  position:absolute;
+  margin:auto;
+  top:40vh;
+  right:0;
+  width:60vh;
+  height:45vh;
+  background: url("https://assets.codepen.io/4152792/jb_hap.png") center -35% / 100% auto no-repeat;
+  transition:1s;
+}
+#breadHap:hover{
+  background-position: center -20%
+}
+
+          /*SECTIONS*/
+section{
+  background:white;
+  margin:0;
+  padding:50px;
+  min-height:40vh;
+}
+.textBox{
+  width: 50%;
+  background: var(--main);
+  border: solid 6vh var(--main);
+  border-radius:5vh;
+}
+section:nth-child(even){
+  background: var(--main);
+}
+section:nth-child(even) h2{
+  text-align:right;
+}
+section:nth-child(even) .textBox{
+  float:right;
+  background:white;
+  border-color: white;
+}
+
+.product-grid{
+  position:relative;
+  height:fit-content;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.product-grid img{
+  background: rgb(248,229,189);
+  margin:20px;
+  width: 200px;
+  height:140px;
+  transition:.5s;
+  box-shadow: 10px 10px rgb(0,0,0,.2)
+}
+.product-grid img:hover{
+  width:280px;
+  height:196px;
+  transform:translateY(-30px)
+}
+
+          /*Footer*/
+footer{
+  text-align:center;
+}
