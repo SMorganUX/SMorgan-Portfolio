@@ -1,9 +1,6 @@
 body{
   background: #6ce672;
-  background-image: url(https://dl.dropbox.com/scl/fi/qvybnmlye33ds6709bsrx/unknown.webp?rlkey=9omq9p0d7fhgkg9lqtkrl5uw3&dl=0), linear-gradient(0deg,rgba(108, 230, 114, 1) 0%, rgba(38, 53, 102, 1) 100%);
-  background-position: center;
-  background-size: auto, 100vw 100vh;
-  
+  background-image: url(https://dl.dropbox.com/scl/fi/qvybnmlye33ds6709bsrx/unknown.webp?rlkey=9omq9p0d7fhgkg9lqtkrl5uw3&dl=0), linear-gradient(0deg,rgba(108, 230, 114, 1) 0%, rgba(38, 53, 102, 1) 100%); 
   font-family: Google Sans Code;
 }
 
