@@ -7,11 +7,11 @@ body{
           /*Fonts*/
 @font-face{
   font-family: Corinthia;
-  src: url("portfolio/justBread/assets/font/Corinthia-Regular.ttf");
+  src: url("assets/font/Corinthia-Regular.ttf");
 }
 @font-face{
   font-family: Quicksand;
-  src: url("portfolio/justBread/assets/font/Quicksand-VariableFont_wght.ttf");
+  src: url("assets/font/Quicksand-VariableFont_wght.ttf");
 }
 h1{
   font-family: Corinthia;
@@ -84,7 +84,7 @@ a{
   right:0;
   width:60vh;
   height:45vh;
-  background: url("portfolio/justBread/assets/img/jb_hap.png") center -35% / 100% auto no-repeat;
+  background: url("assets/img/jb_hap.png") center -35% / 100% auto no-repeat;
   transition:1s;
 }
 #breadHap:hover{
