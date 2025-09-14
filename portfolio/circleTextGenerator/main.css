@@ -1,0 +1,46 @@
+body{
+  background:#dedbd2;
+  font-family:ADAM;
+  color: #4a5759;
+}
+@font-face{
+  font-family:ADAM;
+  src: url(https://dl.dropbox.com/scl/fi/9smsyy9v0subtsrfclyv5/ADAM.CG-PRO.otf?rlkey=8hscjkg4e726vjnp2tllap96x&dl=0)
+}
+
+#banner{
+  width:calc(100% - 6vh);
+  height:fit-content;
+  padding:3vh;
+  background: #4a5759;
+  border-radius: 0 0 10vh 0;
+  color: #dedbd2;
+  box-shadow: 1vh 1vh rgb(0,0,0,.2);
+}
+#inputPanel{
+  float:left;
+  padding: 3vh;
+  color:#4a5759;
+  background: #b0c4b1;
+  border-radius: 0 0 10vh 0;
+  box-shadow: 1vh 1vh rgb(0,0,0,.2);
+}
+input,button{
+  margin-bottom:1vh;
+  border: 1px solid #4a5759;
+  border-radius:1vh;
+}
+
+.circle {
+      position: relative;
+      margin: auto;
+      padding: 1vh;
+    }
+
+    .circle span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform-origin: 0 var(--radius);
+      font-size: var(--font-size);
+    }
