@@ -31,6 +31,11 @@ input,button{
   border-radius:1vh;
 }
 
+footer{
+  width:100%;
+  text-align:center;
+}
+
 .circle {
       position: relative;
       margin: auto;
