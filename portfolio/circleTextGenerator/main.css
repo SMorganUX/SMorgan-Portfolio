@@ -5,7 +5,7 @@ body{
 }
 @font-face{
   font-family:ADAM;
-  src: url(https://dl.dropbox.com/scl/fi/9smsyy9v0subtsrfclyv5/ADAM.CG-PRO.otf?rlkey=8hscjkg4e726vjnp2tllap96x&dl=0)
+  src: url("assets/ADAM.CG PRO.otf")
 }
 
 #banner{
