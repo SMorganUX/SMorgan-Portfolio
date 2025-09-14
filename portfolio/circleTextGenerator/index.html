@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Samantha Morgan">
+  <meta name="description" content="Portfolio Showcase - Text Circle Generator. Javascript coded tool for turning text into a circle png">
+  <title>Text Circle Generator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main>
+<div id="banner">
+  <h1>Text Circle Generator</h1>
+  <p>This generates the input text into a circle using custom font, size, color, and letter-spacing, and allows it to be downloaded as a png.</p>
+</div>
+<div id="inputPanel">
+  <label for="inputText">Text:</label>
+  <input type="text" id="inputText" name="inputText" required minlength="4" maxlength="" size="20" /><br>
+    <label for="fontURL">Font URL:</label>
+  <input type="text" id="fontURL" placeholder="Paste font file URL (e.g. .woff2)"><br>  
+    <label for="fontSize">Font size(px):</label>
+  <input type="number" id="fontSize" placeholder="Enter font-size" maxlength="3" size="4"><br>
+  <label for="letterSpacing">Letter spacing (px):</label>
+<input type="number" id="letterSpacing" placeholder="e.g. 2" size="4"><br>
+  <label for="fontColor">Font Color (HEX):</label>
+<input type="text" id="fontColor" placeholder="000000" size="7" maxlength="7" value="#"><br>
+  <button onclick="makeCircle()">Make Circle</button>
+  <button onclick="downloadImage()">Download as PNG</button>
+</div>
+  <canvas id="circleCanvas" width="600" height="600"></canvas>
+  </main>
+  <footer>&copy; 2025 - Samantha Morgan</footer>
+</body>
+</html>
