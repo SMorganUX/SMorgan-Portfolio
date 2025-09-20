@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+/* Enable smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   --bright: #71F79F;
   --dark: #313E50;
@@ -32,6 +37,32 @@ a:active{color: var(--acc);}
 a:hover{
   background:none;
   color:white;
+}
+      /* NAV */
+nav{
+  position:fixed;
+  margin:auto;
+  top:0;
+  bottom:0;
+  right:0;
+  width:fit-content;
+  height:fit-content;
+  background:white;
+  z-index:100;
+  padding:0;
+  border-radius:1vh 0 0 1vh
+}
+nav ul{
+  list-style: none;
+  justify-content: space-between;
+}
+nav ul li,nav ul li a,nav ul a:visited{
+  color:var(--dark);
+  margin-left:-1em;
+  transition:.3s;
+}
+nav ul a:hover{
+  color:var(--acc);
 }
 
       /*FOOTER*/
@@ -184,6 +215,122 @@ footer{
   background:red;
 }
 
+      /* SECTIONS */
+.section{
+  position:relative;
+  margin:0;
+  width:100%;
+  height:fit-content;
+  min-height:100vh;
+  overflow:hidden;
+}
+.card{
+  position:absolute;
+  margin:auto;
+  top:5%;
+  left:5%;
+  width:90%;
+  height:fit-content;
+  min-height:90%;
+  transform:translateX(-75%);
+  opacity:0;
+  transition:.5s
+}
+.section:nth-child(even) .card{
+  transform:translateX(75%);
+}
+.section:hover .card{
+  transform:translateX(0);
+  opacity:1;
+}
+
+.card h1{
+  margin:0;
+  color:white;
+}
+.leftH{
+  position:absolute;
+  top:-4.45vh;
+  left:-2vh;
+  font-size:17.3vh;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing:-9.2vh;
+  line-height:0vh;
+  -webkit-text-stroke:1vh var(--dark);
+  filter:
+    drop-shadow(.2em 0 var(--dark))
+    drop-shadow(.1em 0 var(--dark))
+}
+
+.topH{
+  float:right;
+  font-size:13vh;
+  background: var(--dark);
+  padding:1vh;
+  clear:both;
+}
+#tech h2{
+  color:white;
+  background:var(--dark);
+  display:block;
+  width:fit-content;
+  padding:.5em;
+  margin:.2em;
+  margin-top:.5em;
+}
+#tech p{
+  background: rgb(255,255,255,.5);
+  display:inline-block;
+  padding:1em;
+  margin:.2em;
+  border-radius:1vh;
+  box-shadow: .5em .5em rgb(0,30,60,.5)
+}
+
+.cardBox{
+  position:relative;
+  display:flex;
+  margin:auto;
+  top:0;
+  left:0;
+  width:100%;
+  height:fit-content;
+  min-height:100%;
+  justify-content:space-around;
+  flex-flow:row wrap;
+}
+.box{
+  margin:2vh;
+  background:white;
+  padding:1em;
+  border-radius:1vh;
+  width:25vw;
+  flex-grow:3;
+  flex-shrink:3;
+  box-shadow: 1vh 1vh rgb(0, 30,60,.4)
+}
+.box h2{
+  display:inline-block;
+}
+.box h2,.box p{
+  font-size:1em;
+  line-height:1em;
+  margin:0;
+}
+
+#hobbies .card{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left:solid 10vh var(--dark);
+  background:linear-gradient(to right, white 20%, transparent);
+}
+#hobbies .cardBox{
+  left:10vh;
+  width:calc(100% - 10vh);
+}
+
 @media only screen and (max-width: 700px) {
   .hero h1{
     font-size:15vw;
@@ -219,4 +366,27 @@ footer{
     width:70vw;
     height:70vw;
   }
+  
+  .section{
+    height:150vh
+  }
+  
+  .section .card h1{
+    position:relative;
+  top:-8vw;
+  left:0vh;
+  font-size:19vw;
+  -webkit-text-stroke:none;
+  writing-mode: horizontal-tb;
+  letter-spacing:0;
+  line-height:0;
+  filter:none;
+  }
+  #hobbies .card{
+    border-left:none;
+    border-top: 20vw solid var(--dark);
+    height: fit-content;
+  }
+  #hobbies .card .cardBox{left:0;margin-left:0;width:90%;display:block;}
+  #hobbies .box{width:100%;margin:1vw;}
 }
