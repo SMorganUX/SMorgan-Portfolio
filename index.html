@@ -8,13 +8,14 @@
       <link rel="stylesheet" href="main.css">
     </head>
     <body>
+      <div id="hero">&nbsp;</div>
       <header class="hero">
         <h1 class="back">Samantha Morgan</h1>
         <div id="portrait"></div>
         <h1 class="front">Samantha Morgan</h1>
       </header>
       
-      <main class="portfolio">
+      <main class="portfolio" id="portfolio">
         <div class="flex-grid">
           <div class="flex-item"><a href="portfolio/circleTextGenerator/index.html" style="background: url('assets/img/thmb_tcg.png') center /cover;"></a></div>
           <div class="flex-item"><a href="portfolio/debtCalc/index.html" style="background: url('assets/img/thmb_debtcalc.gif') top right /cover;"></a></div>
@@ -26,7 +27,6 @@
           <div class="flex-item"><a href="portfolio/gdMagazine/index.html" style="background: url('assets/img/thmb_dg.png') center /cover;"></a></div>
           <div class="flex-item"><a href="portfolio/justBread/index.html" style="background: url('assets/img/thmb_jb.png') top left /cover;"></a></div>
         </div>
-        
         <div id="profile">   
           <div id="circlePortrait"></div>
           <h1>Samantha Morgan</h1>
@@ -41,10 +41,55 @@
             <p><a href="https://codepen.io/sammirae422">CodePen</a></p>
           </div>
         </div>
-      </main>
+        <div class="section" id="hobbies">
+          <div class="card">
+            <h1 class="leftH">HOBBIES</h1>
+            <div class="cardBox">
+              <div class="box">
+                <p><h2>Reading</h2> I've always been an avid reader and while the extent of my reading has declined in busier adult life, I still try to make an effort to read regularly. In recent years, I've used audiobooks as a way to accomplish that by listening to them whenever I work on projects or housework and have expanded my library to include more studious material than just my usual fiction.</p>
+              </div>
+              <div class="box">                
+                <p><h2>Exercise</h2> Being prior military, working out at least semi-regularly has been a part of my weekly schedule, even if I'm not quite as devoted to it as I was when it was a part of my job. I find it's important to at least get a healthy amount of exercise in as someone who spends so much time at a desk.</p>
+              </div>
+              <div class="box">         
+                <p><h2>Digital Art</h2> I get the same kind of satisfaction to drawing as I do with the design process of UI or graphic design. I enjoy making things look nice and experimenting with different design. It was the prerequisite to me learning how to code so that I could do this with webpages and applications as well.</p>
+              </div>
+              <div class="box">         
+                <p><h2>Cooking</h2> I don't actually enjoy cooking. I just like eating new and different foods, so I learned to cook.</p>
+              </div>
+              <div class="box">         
+                <p><h2>Videogames</h2>While not the most productive of hobbies like reading or exercise, I enjoy occasionally playing games that tickle that same creative itch as reading. Games with puzzles to make my brain work or ones that help keep my motorskills in good form tend to be my favorites, even if the latter have been more a training in patience and perseverence than skill. I get a kick out of games that allow me to get more technical, making spreadsheets of data for the sake of min-maxing some aspect of the game.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="tech">
+          <div class="card">
+            <h1 class="topH">Technical</h1>
+            <h1 class="topH" style="clear:both">Skills</h1>
+            <h2>Programming Languages</h2>
+            <p> Python, Java, CSS, HTML, Javascript.</p>
+            <p>Currently, I am learning C++ and improving further on my Python and Java.</p>
+            <h2>Tools</h2>
+            <p>For tools in design, I'm trained in Adobe's programs, and familiar with Figma and Canva.</p>
+            <p>For programming I have experience in React, Android Studio, VSCode, and Eclipse. I'm working on building familiarity with Angular, as well.</p>
+            <h2>Skills</h2>
+            <p>Data analysis, statistics, discrete mathematics, software development, graphic design, UNIX, operating systems, databases, Microsoft Office Suite</p>
+          </div>
+        </div>
       <footer>
         <p>© 2025 Samantha R. Morgan</p>
       </footer>
+      </main>
+      <nav>
+        <ul class=".nav-list">
+          <li><a id="scrollToTopBtn">Hero</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#tech">Skills</a></li>
+        </ul>
+      </nav>
       <script src="scripts.js"></script>
     </body>
 </html>
