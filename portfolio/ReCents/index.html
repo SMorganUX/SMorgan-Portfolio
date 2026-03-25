@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCents</title>
+  </head>
+        <body>
+          <script src="script.js"></script>
+          <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+          <!--SheetJS library for exporting tables data as a spreadsheet!-->
+
+          <header>
+              <h1><span>Re</span>Cents</h1>
+          </header>
+          <div class="base"></div>
+          <div id="tabs">
+            <!-- OVERVIEW PAGE!-->
+    <input type="radio" name="tabs" id="tab1" checked>
+    <label for="tab1" style="margin-top:5vh">$</label>
+    <div class="tab-content" id="content1">
+      <div class="left">
+        <h1>Import Previous Spending Data</h1>
+         <input type="file" accept=".xlsx" onchange="importData(event)">
+        
+        <h1>Export Current Spending Data</h1>
+  <button onclick="exportData()">Export</button>
+      </div>
+
+      <div class="pie" id="overviewGraph">
+        <h1>Budget Overview</h1>
+        <div class="pieHolder">
+          <div class="pieExcess"></div>
+          <div class="pieExpenses"></div>
+          <div class="pieIncome"></div>
+        </div>
+        <h2 class="remaining"></h2>
+      </div>
+    </div>
+
+    <input type="radio" name="tabs" id="tab2">
+    <label for="tab2">-</label>
+            
+    <div class="tab-content" id="content2">
+      <div style="max-height: 50vh; overflow-y: auto; float:left">
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>Date</th><th>Name</th><th>Amount</th><th>Type</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="expense-body">
+            <!-- rows injected here by JS -->
+          </tbody>
+        </table>
+        <div class="entry-inputs">
+          <input type="date" id="expense-date">
+          <input type="text" id="expense-name" placeholder="Description">
+          <select id="expense-type">
+            <option value="">-- Type --</option>
+            <option value="bills">BILLS</option>
+            <option value="necessity">NECESSITY</option>
+            <option value="luxury">LUXURY</option>
+            <option value="other">OTHER</option>
+          </select>
+          <input type="number" id="expense-amount" placeholder="0.00" step="0.01">
+          <button onclick="addExpense()">Add Expense</button>
+        </div>
+      </div>
+      <div class="bar" id="expenseGraph">
+        <h1>Expenses</h1>
+        <div class="barHolder">
+          <div class="billsBar"></div>
+          <div class="necessityBar"></div>
+          <div class="luxuryBar"></div>
+          <div class="otherBar"></div>
+        </div>
+        <h2 class="Expenses"></h2>
+      </div>
+    </div>
+
+    <input type="radio" name="tabs" id="tab3">
+    <label for="tab3">+</label>
+    <div class="tab-content" id="content3">
+      <div style="max-height: 50vh; overflow-y: auto; float:left">
+        <table id="income-table">
+          <thead>
+            <tr>
+              <th>Date</th><th>Name</th><th>Amount</th><th>Type</th><th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="income-body">
+            <!-- rows injected here by JS -->
+          </tbody>
+        </table>
+        <div class="entry-inputs">
+          <input type="date" id="income-date">
+          <input type="text" id="income-name" placeholder="Description">
+          <select id="income-type">
+            <option value="">-- Type --</option>
+            <option value="salary">SALARY/WAGES</option>
+            <option value="freelance">FREELANCE</option>
+            <option value="investments">INVESTMENTS</option>
+            <option value="benefits">BENEFITS</option>
+            <option value="other">OTHER</option>
+          </select>
+          <input type="number" id="income-amount" placeholder="0.00" step="0.01">
+          <button onclick="addIncome()">Add Income</button>
+        </div>
+      </div>
+      
+      <div class="bar" id="incomeGraph">
+        <h1>Income</h1>
+        <div class="barHolder">
+          <div class="salaryBar"></div>
+          <div class="freelanceBar"></div>
+          <div class="investmentsBar"></div>
+          <div class="benefitsBar"></div>
+          <div class="otherBar"></div>
+        </div>
+        <h2 class="Income"></h2>
+      </div>
+    </div>
+
+</div>
+        </body>
+    </html>
