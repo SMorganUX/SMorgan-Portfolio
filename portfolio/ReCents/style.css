@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  --white: rgb(250,250,255);
+  --accent: #72edb6;
+  background:white;
+  font-family: 'exo 2', sans-serif;
+}
+
+/*TYPOGRAPHY*/
+h1{
+  display:block;
+  width:fit-content;
+  font-family: 'exo 2', sans-serif;
+}
+
+header{
+  height:10vh;
+  display:flex;
+  flex-flow: row;
+  align-items:flex-end;
+  justify-content: space-between;
+  line-height:100%;
+  padding-left:3vw;
+  padding-right:3vw;
+}
+header h1{
+  margin:0;
+  padding:0;
+  font-family: "Exo 2", sans-serif;
+  color: var(--accent);
+  font-size:48px;
+}
+header h1 span{color:black}
+header a{
+  color:black;
+  font-family: "Exo 2", sans-serif;
+  text-decoration:none;
+  font-size:26px;
+  font-weight:bold;
+}
+
+.base{
+  position:absolute;
+  margin:auto;
+  top:15vh;
+  left:5vw;
+  width:95vw;
+  height:85vh;
+  background: var(--white);
+  box-shadow: inset 1vh 1vh 1vh rgb(10,0,20,.05);
+  border-radius: 100px 0 0 0
+}
+
+#tabs{
+  position:relative;
+  margin:0;
+  margin-left:-1vw;
+  padding:0;
+  top:10.5vh;
+  left:0;
+  width:100%;
+  min-height:50vh;
+  height:fit-content;
+}
+
+input[type="radio"] {
+  display:none;
+}
+label {
+  display:block;
+  padding: 0;
+  padding-top:10px;
+  padding-bottom:10px;
+  cursor: pointer;
+  background: white;
+  width:5vw;
+  height:5vh;
+  font-family: "exo 2", sans-serif;
+  text-align:center;
+  font-size:4vh;
+  font-weight:bold;
+}
+label:hover{color:var(--accent);}
+
+/* Style the active tab label */
+input[type="radio"]:checked + label {
+  background: var(--white);
+  width:6vw;
+  box-shadow:
+    inset 1vh 1vh .5vh rgb(10,0,20,.05);
+  -webkit-mask: linear-gradient(to right, var(--white) 80%, transparent);
+}
+
+.tab-content {
+  float:right;
+  display: none;
+  margin-top:calc(-5vh - 20px);
+  padding: 20px;
+  width:90vw;
+  border: 1px solid #ccc;
+}
+#content2{
+  margin-top:calc(-10vh - 40px);
+}
+#content3{
+  margin-top:calc(-15vh - 60px);
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+.left{
+  width:fit-content;
+  float:left;
+}
+
+table{
+  border: solid #62B28A 5px;
+  border-radius:10px;
+  background:#62B28A;
+  min-width:40vw;
+  border-spacing: 0;
+}
+th{
+  background: #62B28A;
+  color:white;
+  font-family: 'exo 2', sans-serif;
+  margin:0;
+}
+td{
+  background:white;
+  text-align:center
+}
+
+/* BARCHARTS */
+.bar{float:right}
+
+.barHolder {
+  display: flex;
+  align-items: flex-end;  /* bars grow upward */
+  gap: 16px;
+  height: 200px;          /* matches BAR_MAX_HEIGHT */
+  padding-bottom: 24px;   /* room for labels */
+}
+
+.billsBar, .necessityBar, .luxuryBar, .otherBar, .salaryBar, .freelanceBar, .investmentsBar, .benefitsBar {
+  width: 60px;
+  position: relative;
+  transition: height 0.3s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Amount above the bar */
+.billsBar::before, .necessityBar::before, .luxuryBar::before, .otherBar::before, .salaryBar::before, .freelanceBar::before, .investmentsBar::before, .benefitsBar::before  {
+  content: attr(data-amount);
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* Label below the bar */
+.billsBar::after, .necessityBar::after, .luxuryBar::after, .otherBar::after, .salaryBar::after, .freelanceBar::after, .investmentsBar::after, .benefitsBar::after  {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* OVERVIEW GRAPH */
+#overviewGraph{
+  float:right;
+  margin-right:5vw;
+}
+.pieHolder {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+/* Each ring is absolutely stacked, same center */
+.pieExcess,
+.pieExpenses,
+.pieIncome {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Outermost ring - overspend */
+.pieExcess {
+  width: 220px;
+  height: 220px;
+  top: 0; left: 0;
+  /* Mask the inner part to make it a ring */
+  -webkit-mask: radial-gradient(transparent 68px, black 69px);
+  mask: radial-gradient(transparent 68px, black 69px);
+}
+
+/* Middle ring - expenses */
+.pieExpenses {
+  width: 180px;
+  height: 180px;
+  top: 20px; left: 20px;
+  -webkit-mask: radial-gradient(transparent 52px, black 53px);
+  mask: radial-gradient(transparent 52px, black 53px);
+}
+
+/* Center circle - income label */
+.pieIncome {
+  width: 100px;
+  height: 100px;
+  top: 60px; left: 60px;
+  background: #62B26B;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'exo 2', sans-serif;
+  font-size: 0.85rem;
+  text-align: center;
+}
